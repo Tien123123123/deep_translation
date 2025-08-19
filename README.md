@@ -2,11 +2,11 @@ Text Translation with Deep Learning models
 
 This project is about creating AI, allowing to detect and recognize texts from user captured image to translate them to another language.
 
-Dataset: Total Text - Scene Text Recognition (Kaggle)
-Dataset link: https://www.kaggle.com/datasets/ipythonx/totaltextstr
-Detection: YOLOv5
-Recognition: Paddle OCR
-Translate: Argo Translate
+- Dataset: Total Text - Scene Text Recognition (Kaggle)
+- Dataset link: https://www.kaggle.com/datasets/ipythonx/totaltextstr
+- Detection: YOLOv5
+- Recognition: Paddle OCR
+- Translate: Argo Translate
 
 HOW TO USE ?
 1. Install requirement from requirement.txt
