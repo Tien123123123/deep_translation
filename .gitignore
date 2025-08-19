@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.ipynb_checkpoints/
+
+# dataset
+dataset/
+*.png
+*.jpg
+
+# model
+*.pt
