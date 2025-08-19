@@ -8,6 +8,8 @@ This project is about creating AI, allowing to detect and recognize texts from u
 - Recognition: Paddle OCR
 - Translate: Argo Translate
 
+HOW IT WORK ?
+
 HOW TO USE ?
 1. Install requirement from requirement.txt
 
@@ -16,3 +18,5 @@ HOW TO USE ?
 3. For running:
    - Run set_up.py
    - Run inference.py
+  
+RESUST 
