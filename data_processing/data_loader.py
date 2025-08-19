@@ -15,7 +15,6 @@ class customized_data():
                 self.data_pth.append(item.path)
 
     def min_max_capture(self, item):
-        # Extract all numbers from the item using regex
         numbers = re.findall(r'\d+', item)
         array = [int(x) for x in numbers if x]
         return min(array), max(array)
@@ -28,21 +27,18 @@ class customized_data():
             current_line = ""
             for line in lines:
                 line = line.strip()
-                if not line:  # Bỏ qua các dòng trống
+                if not line:
                     continue
-                # Nếu dòng không kết thúc bằng ']', nối vào current_line
                 if not line.endswith(']'):
                     current_line += " " + line
                     continue
                 else:
                     current_line += " " + line
-                    # Chuẩn hóa current_line: thay thế nhiều khoảng trắng hoặc xuống dòng bằng một khoảng trắng
                     current_line = re.sub(r'\s+', ' ', current_line.strip())
                     if "ornt: [u'#']" in current_line:
                         current_line = ""
                         continue
 
-                    # Tách dòng đã nối bằng dấu phẩy
                     items = current_line.split(", ")
                     xmin, xmax, ymin, ymax = None, None, None, None
 
@@ -56,7 +52,7 @@ class customized_data():
 
                     if all(v is not None for v in [xmin, ymin, xmax, ymax]):
                         target_list.append([xmin, ymin, xmax, ymax])
-                    current_line = ""  # Đặt lại cho object tiếp theo
+                    current_line = ""
 
         print(f"target list: {target_list}", end="\r")
         return target_list
