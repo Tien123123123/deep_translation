@@ -1,16 +1,18 @@
 import os, shutil
-from Projects.deep_translation.arg_parser.arg_detection import arg_detection
-from Projects.deep_translation.arg_parser.arg_recognition import arg_recognition
+from arg_parser.arg_detection import arg_detection
+from arg_parser.arg_recognition import arg_recognition
 import torch
 from paddleocr import TextRecognition
 
-def set_up_models():
-    yolo_root = arg_detection().yolo_dir
-    exp_root = os.path.join(yolo_root, f"runs/train/{arg_detection().exp}/weights/best.pt")
+def set_up_models(args):
+    args_detect = args
+    yolo_root = args_detect.yolo_dir
+    exp_root = os.path.join(yolo_root, f"runs/train/{args_detect.exp}/weights/best.pt")
     model_yolo = torch.hub.load(yolo_root, "custom", exp_root, source="local")
 
+    args_recog = arg_recognition()
     model_ocr = TextRecognition(
-        model_name=arg_recognition().model
+        model_name=args_recog.model
     )
 
     return model_yolo, model_ocr

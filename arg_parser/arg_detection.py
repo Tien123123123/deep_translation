@@ -14,6 +14,6 @@ def arg_detection():
     parser.add_argument("-s", "--show_object", type=bool, default=False, help="show detected objects")
     parser.add_argument("-r", "--result", type=bool, default=False, help="show detection result")
 
-    args = parser.parse_args()
+    args = parser.parse_args([])
     return args
 
