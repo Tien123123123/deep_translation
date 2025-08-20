@@ -1,21 +1,26 @@
 import os, shutil
-from arg_parser.arg_detection import arg_detection
-from arg_parser.arg_recognition import arg_recognition
 import torch
 from paddleocr import TextRecognition
 
-def set_up_models(args):
-    args_detect = args
-    yolo_root = args_detect.yolo_dir
-    exp_root = os.path.join(yolo_root, f"runs/train/{args_detect.exp}/weights/best.pt")
+def set_up_detection(args):
+    yolo_root = args.yolo_dir
+    exp_root = os.path.join(yolo_root, f"runs/train/{args.exp}/weights/best.pt")
     model_yolo = torch.hub.load(yolo_root, "custom", exp_root, source="local")
 
-    args_recog = arg_recognition()
+    return model_yolo
+
+def set_up_recognition(args):
     model_ocr = TextRecognition(
-        model_name=args_recog.model
+        model_name=args.model_recognition
     )
 
-    return model_yolo, model_ocr
+    return model_ocr
+
+def set_up_models(args):
+    detection = set_up_detection(args)
+    recognition = set_up_recognition(args)
+
+    return detection, recognition
 
 def set_up_inference():
     root = "dataset/"

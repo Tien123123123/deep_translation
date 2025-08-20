@@ -3,7 +3,7 @@ import cv2
 import warnings
 from pprint import pprint
 from arg_parser.arg_detection import arg_detection
-from set_up import set_up_models
+from set_up import set_up_detection
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 def inference_detection(yolo_model, args):
@@ -20,8 +20,8 @@ def inference_detection(yolo_model, args):
     # Inference
     image = cv2.imread(item)
     inf_images = {}
-    show_object_detection = arg.show_object
-    show_detection_result = arg.result
+    show_object_detection = arg.show_detection_object
+    show_detection_result = arg.show_detection_result
     thresh_hold = 0.5
 
     for idx, pred in enumerate(preds):
@@ -69,6 +69,7 @@ def inference_detection(yolo_model, args):
     return inf_images
 
 if __name__ == '__main__':
-    yolo_model, ocr_model = set_up_models()
-    detection = inference_detection(yolo_model, args=arg_detection())
+    args = arg_detection()
+    yolo_model = set_up_detection(args)
+    detection = inference_detection(yolo_model, args=args)
     pprint(detection)
