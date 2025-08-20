@@ -13,7 +13,7 @@ def inference_translate(data, args):
     root = arg.model_translation
     from_code = arg.from_code
     to_code = arg.to_code
-    downloaded_package = True
+    downloaded_package = arg.downloaded_package
     if os.path.exists(root) and downloaded_package:
         package.install_from_path(root)
     else:
