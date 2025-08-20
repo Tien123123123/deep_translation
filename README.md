@@ -28,7 +28,7 @@ HOW TO USE ?
                 <img width="254" height="140" alt="image" src="https://github.com/user-attachments/assets/7320f4be-231d-4ec4-b16a-474c6f206b56" />
 
          - language_dataset: contain Argo Translate downloaded models
-            <img width="278" height="47" alt="image" src="https://github.com/user-attachments/assets/e0c5638a-d555-4d66-a256-9c0d4e77ab05" />
+           <img width="278" height="47" alt="image" src="https://github.com/user-attachments/assets/e0c5638a-d555-4d66-a256-9c0d4e77ab05" />
 
    - Run inference.py
   
