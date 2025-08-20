@@ -11,7 +11,7 @@ def arg_inference():
     parser.add_argument("--exp", type=str, default="exp29", help="yolo exp")
     parser.add_argument("--img_dir", type=str, default="dataset/checking_dataset/image.jpg", help="image path")
     parser.add_argument("--out_path", type=str, default=f"dataset/checking_dataset/text_detection_result")
-
+    parser.add_argument("-t", "--thresh_hold", type=float, default=0.5, help="thresh hold for detection")
     parser.add_argument("--show_detection_object", type=bool, default=False, help="show detected objects")
     parser.add_argument("--show_detection_result", type=bool, default=False, help="show detection result")
 

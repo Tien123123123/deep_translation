@@ -10,9 +10,9 @@ def arg_detection():
     parser.add_argument("-e", "--exp", type=str, default="exp29", help="yolo exp")
     parser.add_argument("-i", "--img_dir", type=str, default="dataset/checking_dataset/image.jpg", help="image path")
     parser.add_argument("-o", "--out_path", type=str, default=f"dataset/checking_dataset/text_detection_result")
-
-    parser.add_argument("--show_detection_object", type=bool, default=False, help="show detected objects")
-    parser.add_argument("--show_detection_result", type=bool, default=False, help="show detection result")
+    parser.add_argument("-t", "--thresh_hold", type=float, default=0.5, help="thresh hold for detection")
+    parser.add_argument("-s", "--show_detection_object", type=bool, default=False, help="show detected objects")
+    parser.add_argument("-r", "--show_detection_result", type=bool, default=False, help="show detection result")
 
     args = parser.parse_args()
     return args

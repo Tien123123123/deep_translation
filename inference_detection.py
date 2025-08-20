@@ -22,7 +22,7 @@ def inference_detection(yolo_model, args):
     inf_images = {}
     show_object_detection = arg.show_detection_object
     show_detection_result = arg.show_detection_result
-    thresh_hold = 0.5
+    thresh_hold = args.thresh_hold
 
     for idx, pred in enumerate(preds):
         xmin, ymin, xmax, ymax, conf_thresh, cls = pred
@@ -62,6 +62,7 @@ def inference_detection(yolo_model, args):
         }
 
     if show_detection_result == True:
+        cv2.imwrite("dataset/checking_dataset/detect_output.jpg", image)
         cv2.imshow("Detection result - Close to continue process", image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
