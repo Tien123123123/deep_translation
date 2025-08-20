@@ -6,14 +6,13 @@ This project is about creating AI, allowing to detect and recognize texts from u
 - Dataset link: https://www.kaggle.com/datasets/ipythonx/totaltextstr
 - Detection: YOLOv5
 - Recognition: Paddle OCR
-- Translate: Argo Translate
+- Translate: Argo Translate  
 
 HOW IT WORK ?
-<img width="1074" height="211" alt="image" src="https://github.com/user-attachments/assets/ab439a04-8770-4399-8c30-53787c558efb" />
+<img width="1074" height="211" alt="image" src="https://github.com/user-attachments/assets/ab439a04-8770-4399-8c30-53787c558efb" />  
 
 
-
-HOW TO USE ?
+HOW TO USE ?  
 A. Install requirement from requirement.txt
    - Note: the system need to have trained model to run. To train model follow B part (below).
 
