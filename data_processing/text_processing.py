@@ -29,12 +29,12 @@ def seperate_word(text):
 
     return array
 
-def flatten_and_convert(lst):
+def flatten_and_convert(lst, args):
     result = []
     for item in lst:
         if isinstance(item, list):
             a_str = ' '.join(str(x) for x in item)
-            a_str = inference_translate(a_str)
+            a_str = inference_translate(a_str, args)
             result.append(a_str)
         else:
 

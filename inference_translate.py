@@ -2,14 +2,15 @@ import sys, os, re
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from argostranslate import package, translate
 from arg_parser.arg_translation import arg_translation
+from pprint import pprint
 
-def inference_translate(data):
-    arg = arg_translation()
+def inference_translate(data, args):
+    arg = args
     # receive text
     str_list = data
 
     # install language
-    root = arg.model
+    root = arg.model_translation
     from_code = arg.from_code
     to_code = arg.to_code
     downloaded_package = True
@@ -33,7 +34,7 @@ def inference_translate(data):
     else:
         return str_item
 
-    if arg.show_result == True:
+    if arg.show_translation_result == True:
         print("--" * 10)
         print(f"Before: {str_list}")
         print(f"After: {str_item}")
@@ -42,6 +43,7 @@ def inference_translate(data):
 
 
 if __name__ == '__main__':
+    args = arg_translation()
     data = {'object_1': {'bnd_box': [145, 84, 518, 107],
               'label_recognition': "Beef Stir Fry"},
  'object_2': {'bnd_box': [75, 274, 580, 320],
@@ -51,7 +53,7 @@ if __name__ == '__main__':
               'label_recognition': 'George Jean Nathan'}}
 
     for key, val in data.items():
-        translated_str = inference_translate(val["label_recognition"])
+        translated_str = inference_translate(val["label_recognition"], args)
         data[key]["label_recognition"] = translated_str
 
-    print(data)
+    pprint(data)
