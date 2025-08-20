@@ -13,8 +13,10 @@ HOW IT WORK ?
 
 
 HOW TO USE ?  
-A. Install requirement from requirement.txt
-   - Note: the system need to have trained model to run. To train model follow B part (below).
+A. Install requirement from requirement.txt  
+   Note:  
+   - The system need to have trained model to run. To train model follow B part (below).  
+   - To run AI models in training and inference, I recommend using GPU by install cuda  
 
 B. For trainning:  
    1. Run yolo_processing:
