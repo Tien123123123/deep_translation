@@ -31,6 +31,7 @@ HOW TO USE ?
            <img width="278" height="47" alt="image" src="https://github.com/user-attachments/assets/e0c5638a-d555-4d66-a256-9c0d4e77ab05" />
 
    2. Run inference.py
-      - CLI: <img width="521" height="30" alt="image" src="https://github.com/user-attachments/assets/50d8b70e-caa3-4fba-8a75-82dac7b2a6af" />
+      - Quick CLI: <img width="521" height="30" alt="image" src="https://github.com/user-attachments/assets/50d8b70e-caa3-4fba-8a75-82dac7b2a6af" />
+      - CLI with translate:
   
 RESUST 
