@@ -12,5 +12,5 @@ def arg_translation():
 
     parser.add_argument("-s", "--show_result", type=bool, default= False, help="Show translate result")
 
-    args = parser.parse_args()
+    args = parser.parse_args([])
     return args

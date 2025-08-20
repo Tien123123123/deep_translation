@@ -9,8 +9,7 @@ from data_processing.text_processing import seperate_word, flatten_and_convert
 from arg_parser.arg_detection import arg_detection
 from set_up import set_up_inference, set_up_models
 
-def put_text(images_dict):
-    args = arg_detection()
+def put_text(images_dict, args):
     ori_image = f"{args.img_dir}"
     image = cv2.imread(ori_image)
     for idx, val in images_dict.items():
@@ -36,13 +35,14 @@ def put_text(images_dict):
     cv2.destroyAllWindows()
 
 
-def inference():
+def inference(args):
+    args_detect = args
     print("Set up models and resources for inference...")
-    yolo_model, ocr_model = set_up_models()
+    yolo_model, ocr_model = set_up_models(args_detect)
     set_up_inference()
 
     print("Text detection processing...")
-    images_dict = inference_detection(yolo_model)
+    images_dict = inference_detection(yolo_model, args_detect)
 
     print("Text recognition processing...")
     images_dict = inference_recognition(images_dict, ocr_model)
@@ -62,7 +62,8 @@ def inference():
             'label_recognition': label
         }
 
-    put_text(data_dict)
+    put_text(data_dict, args_detect)
 
 if __name__ == '__main__':
-    inference()
+    args = arg_detection()
+    inference(args)

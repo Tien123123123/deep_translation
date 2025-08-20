@@ -6,8 +6,8 @@ from arg_parser.arg_detection import arg_detection
 from set_up import set_up_models
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-def inference_detection(yolo_model):
-    arg = arg_detection()
+def inference_detection(yolo_model, args):
+    arg = args
     item = arg.img_dir
 
     model = yolo_model
@@ -70,5 +70,5 @@ def inference_detection(yolo_model):
 
 if __name__ == '__main__':
     yolo_model, ocr_model = set_up_models()
-    detection = inference_detection(yolo_model)
+    detection = inference_detection(yolo_model, args=arg_detection())
     pprint(detection)

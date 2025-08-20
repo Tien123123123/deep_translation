@@ -9,5 +9,5 @@ def arg_recognition():
     parser.add_argument("-m", "--model", type=str, default="PP-OCRv5_server_rec", help="Paddle OCR model name")
     parser.add_argument("-l", "--language", type=str, default=None, help="language for recognition")
 
-    args = parser.parse_args()
+    args = parser.parse_args([])
     return args
