@@ -32,7 +32,9 @@ HOW TO USE ?
 
    2. Run inference.py
       - Quick CLI: <img width="521" height="30" alt="image" src="https://github.com/user-attachments/assets/50d8b70e-caa3-4fba-8a75-82dac7b2a6af" />
-      - CLI with translate: <img width="938" height="28" alt="image" src="https://github.com/user-attachments/assets/1d36798c-69f3-4f79-b9d6-718add329226" />
+      
+      - CLI with translate: <img width="940" height="29" alt="image" src="https://github.com/user-attachments/assets/4cc8f70b-0bf6-44f5-ac35-a9ad27439c66" />
+
          + img_dir: input image directory
          + from_code: original language
          + to_code: language to translate
