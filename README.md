@@ -32,6 +32,12 @@ HOW TO USE ?
 
    2. Run inference.py
       - Quick CLI: <img width="521" height="30" alt="image" src="https://github.com/user-attachments/assets/50d8b70e-caa3-4fba-8a75-82dac7b2a6af" />
-      - CLI with translate:
+      - CLI with translate: <img width="938" height="28" alt="image" src="https://github.com/user-attachments/assets/1d36798c-69f3-4f79-b9d6-718add329226" />
+         + img_dir: input image directory
+         + from_code: original language
+         + to_code: language to translate
+         + download_package: True if having download model in "language dataset" folder else False
+           Note: translate language package need to be in Argos Translate Package Index. If not, try download package and put it in "language_dataset" folder
+           Argos Translate Package Index: https://www.argosopentech.com/argospm/index
   
 RESUST 
