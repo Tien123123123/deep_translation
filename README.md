@@ -37,7 +37,7 @@ HOW TO USE ?
          + from_code: original language
          + to_code: language to translate
          + download_package: True if having download model in "language dataset" folder else False
-           Note: translate language package need to be in Argos Translate Package Index. If not, try download package and put it in "language_dataset" folder
-           Argos Translate Package Index: https://www.argosopentech.com/argospm/index
+           * Note: translate language package need to be in Argos Translate Package Index. If not, try download package and put it in "language_dataset" folder
+           * Argos Translate Package Index: https://www.argosopentech.com/argospm/index
   
 RESUST 
