@@ -22,10 +22,10 @@ B. For trainning:
       <img width="345" height="43" alt="image" src="https://github.com/user-attachments/assets/29862266-1766-407e-a1f5-4bebf6bcdd75" />  
          - When running yolo_processing.py, the system will create dataset folder for containing text_dataset folder
          - text_dataset folder will contain yolo structure dataset, include images and annotations (txt files) for both Train and Test set   
-           <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />
-
-
-   
+           <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />  
+   2. Prepare data.yaml: In path, replace with your dataset directory
+      Note: dataset folder need to follow YOLOv5 dataset structure
+   3. Train YOLO model with data.yaml  
 
 C. For running:
    1. Run set_up.py: when running set_up.py, system will create dataset folder for containing checking_dataset and language_dataset
