@@ -8,4 +8,4 @@ val: images/test # 128 images for validation
 
 # Classes (example using 80 COCO classes)
 names:
-    0: text
+    0:
