@@ -15,10 +15,12 @@ HOW IT WORK ?
 
 HOW TO USE ?
 1. Install requirement from requirement.txt
+   Note: the system need to have trained model to run. To train model follow step 3.
 
-2. For training
-...
-3. For running:
+3. For training
+   
+
+4. For running:
    1. Run set_up.py: when running set_up.py, system will create dataset folder for containing checking_dataset and language_dataset
       <img width="314" height="67" alt="image" src="https://github.com/user-attachments/assets/9f2d1ba5-09b5-4599-a2f8-fca9cf20d6b3" />
          - checking_dataset:
