@@ -42,4 +42,11 @@ HOW TO USE ?
            * Note: translate language package need to be in Argos Translate Package Index. If not, try download package and put it in "language_dataset" folder
            * Argos Translate Package Index: https://www.argosopentech.com/argospm/index
   
-RESUST 
+RESULT:
+Detection
+<img width="447" height="273" alt="image" src="https://github.com/user-attachments/assets/d0357571-9adf-46e4-831c-ab9fb7b5977e" />
+
+Translation:
+<img width="447" height="266" alt="image" src="https://github.com/user-attachments/assets/6adc2ace-1fe2-4535-bb9f-5f5626565624" />
+
+
