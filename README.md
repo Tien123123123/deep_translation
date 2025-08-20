@@ -24,8 +24,8 @@ B. For trainning:
          - When running yolo_processing.py, the system will create dataset folder for containing text_dataset folder
          - text_dataset folder will contain yolo structure dataset, include images and annotations (txt files) for both Train and Test set   
            <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />  
-   2. Prepare data.yaml: In path, replace with your dataset directory
-      Note: dataset folder need to follow YOLOv5 dataset structure
+   2. Prepare data.yaml: In path, replace with your dataset directory  
+      Note: dataset folder need to follow YOLOv5 dataset structure  
    3. Train YOLO model with data.yaml  
 
 C. For running:
