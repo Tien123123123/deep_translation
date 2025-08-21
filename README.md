@@ -53,10 +53,10 @@ C. For running:
            * Argos Translate Package Index: https://www.argosopentech.com/argospm/index
   
 RESULT:
-- Detection
-   <img width="447" height="273" alt="image" src="https://github.com/user-attachments/assets/d0357571-9adf-46e4-831c-ab9fb7b5977e" />
+- Detection  
+   <img width="447" height="273" alt="image" src="https://github.com/user-attachments/assets/d0357571-9adf-46e4-831c-ab9fb7b5977e" />  
 
-- Translation:
+- Translation:  
    <img width="447" height="266" alt="image" src="https://github.com/user-attachments/assets/6adc2ace-1fe2-4535-bb9f-5f5626565624" />
 
 
