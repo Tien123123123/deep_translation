@@ -4,7 +4,7 @@ This project is about creating AI, allowing to detect and recognize texts from u
 
 - Dataset: Total Text - Scene Text Recognition (Kaggle)
 - Dataset link: https://www.kaggle.com/datasets/ipythonx/totaltextstr
-- Detection: YOLOv5
+- Detection: YOLOv11
 - Recognition: Paddle OCR
 - Translate: Argo Translate  
 
