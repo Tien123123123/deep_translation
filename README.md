@@ -25,7 +25,7 @@ B. For trainning:
          - text_dataset folder will contain yolo structure dataset, include images and annotations (txt files) for both Train and Test set   
            <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />  
    2. Prepare data.yaml: In path, replace with your dataset directory  
-      Note: dataset folder need to follow YOLOv5 dataset structure  
+      Note: dataset folder need to follow YOLO dataset structure  
    3. Train YOLO model with data.yaml  
       - For new model:  
       <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />
