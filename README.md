@@ -26,9 +26,10 @@ B. For trainning:
            <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />  
    2. Prepare data.yaml: In path, replace with your dataset directory  
       Note: dataset folder need to follow YOLOv5 dataset structure  
-   3. Train YOLO model with data.yaml
+   3. Train YOLO model with data.yaml  
       - For new model:  
-      <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />  
+      <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />
+  
       - For pre-trained model:  
       <img width="705" height="31" alt="image" src="https://github.com/user-attachments/assets/16539915-82b2-42f3-92b8-683adb02652f" />
 
