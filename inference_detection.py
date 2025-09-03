@@ -9,13 +9,9 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 def inference_detection(yolo_model, args):
     arg = args
     item = arg.img_dir
-
     model = yolo_model
-    model.eval()
+    results = model(item)
 
-    predictions = model(item)
-    # predictions.show()
-    preds = predictions.xyxy[0]
 
     # Inference
     image = cv2.imread(item)
@@ -24,42 +20,46 @@ def inference_detection(yolo_model, args):
     show_detection_result = arg.show_detection_result
     thresh_hold = args.thresh_hold
 
-    for idx, pred in enumerate(preds):
-        xmin, ymin, xmax, ymax, conf_thresh, cls = pred
-        xmin, ymin, xmax, ymax, conf_thresh, cls = int(xmin), int(ymin), int(xmax), int(ymax), float(conf_thresh), int(cls)
+    for result in results:
+        for idx, box  in enumerate(result.boxes):
+            score = float(box.conf.item())
+            cls = int(box.cls.item())
+            label = result.names[cls]
 
-        if conf_thresh < thresh_hold:
-            continue
+            xmin, ymin, xmax, ymax = box.xyxy.tolist()[0]
+            xmin, ymin, xmax, ymax = int(xmin), int(ymin), int(xmax), int(ymax)
 
-        label = model.names[int(cls)]
-        if show_object_detection == True:
-            print("--"*50)
-            print(f"Object {idx + 1}")
-            print(f"Label: {label}, Confidence: {conf_thresh:.3f}")
-            print(f"Bounding Box: [x_min: {xmin:.1f}, y_min: {ymin:.1f}, x_max: {xmax:.1f}, y_max: {ymax:.1f}]")
+            if score < thresh_hold:
+                continue
 
-        if show_detection_result == True:
-            cv2_image = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (255, 0, 0), 2)
-            cv2.putText(cv2_image, f"{label}-{conf_thresh:.3f}", (xmin, ymin - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
-        cropped_image = image[ymin:ymax, xmin:xmax]
-        output_path = os.path.join(arg.out_path, f"cropped_image_{idx + 1}_{label}.png")
-        cv2.imwrite(output_path, cropped_image)
-        if show_object_detection == True:
-            print("--" * 50)
-            if os.path.exists(output_path):
-                print(f"Cropped image saved to {output_path}")
-            else:
-                print(f"Cannot crop Image {idx + 1}")
+            if show_object_detection == True:
+                print("--"*50)
+                print(f"Object {idx + 1}")
+                print(f"Label: {label}, Confidence: {score:.3f}")
                 print(f"Bounding Box: [x_min: {xmin:.1f}, y_min: {ymin:.1f}, x_max: {xmax:.1f}, y_max: {ymax:.1f}]")
 
-        inf_images[f"image_{idx + 1}"] = {
-            "object_id": idx + 1,
-            "label": label,
-            "score": conf_thresh,
-            "bnd_box": [xmin, ymin, xmax, ymax],
-            "path": output_path
-        }
+            if show_detection_result == True:
+                cv2_image = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (255, 0, 0), 2)
+                cv2.putText(cv2_image, f"{label}-{score:.3f}", (xmin, ymin - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+            cropped_image = image[ymin:ymax, xmin:xmax]
+            output_path = os.path.join(arg.out_path, f"cropped_image_{idx + 1}_{label}.png")
+            cv2.imwrite(output_path, cropped_image)
+            if show_object_detection == True:
+                print("--" * 50)
+                if os.path.exists(output_path):
+                    print(f"Cropped image saved to {output_path}")
+                else:
+                    print(f"Cannot crop Image {idx + 1}")
+                    print(f"Bounding Box: [x_min: {xmin:.1f}, y_min: {ymin:.1f}, x_max: {xmax:.1f}, y_max: {ymax:.1f}]")
+
+            inf_images[f"image_{idx + 1}"] = {
+                "object_id": idx + 1,
+                "label": label,
+                "score": score,
+                "bnd_box": [xmin, ymin, xmax, ymax],
+                "path": output_path
+            }
 
     if show_detection_result == True:
         cv2.imwrite("dataset/checking_dataset/detect_output.jpg", image)
