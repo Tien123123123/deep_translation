@@ -28,12 +28,12 @@ B. For trainning:
       Note: dataset folder need to follow YOLOv5 dataset structure  
    3. Train YOLO model with data.yaml
       - For new model:  
-      <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />
-      - For pre-trained model:
+      <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />  
+      - For pre-trained model:  
       <img width="705" height="31" alt="image" src="https://github.com/user-attachments/assets/16539915-82b2-42f3-92b8-683adb02652f" />
 
-      + pre_train: set True system will pre-train model and vice versa  
-      + model_pretrain_dir: model use for pre-train   
+         + pre_train: set True system will pre-train model and vice versa  
+         + model_pretrain_dir: model use for pre-train   
 
  
 
