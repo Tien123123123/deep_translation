@@ -16,7 +16,7 @@ HOW TO USE ?
 A. Install requirement from requirement.txt  
    Note:  
    - The system need to have trained model to run. To train model follow B part (below).
-   - If you have trained model to run follow C part  
+   - If you have trained model to run, follow C part  
    - To run AI models in training and inference, I recommend using GPU by install cuda  
 
 B. For trainning:  
