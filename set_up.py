@@ -1,11 +1,12 @@
 import os, shutil
 import torch
 from paddleocr import TextRecognition
+from ultralytics import YOLO
 
 def set_up_detection(args):
     yolo_root = args.yolo_dir
-    exp_root = os.path.join(yolo_root, f"runs/train/{args.exp}/weights/best.pt")
-    model_yolo = torch.hub.load(yolo_root, "custom", exp_root, source="local")
+    exp_root = os.path.join(yolo_root, f"{args.exp}/weights/best.pt")
+    model_yolo = YOLO(exp_root)
 
     return model_yolo
 
