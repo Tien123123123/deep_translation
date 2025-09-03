@@ -51,7 +51,9 @@ C. For running:
          - language_dataset: contain Argo Translate downloaded models
            <img width="278" height="47" alt="image" src="https://github.com/user-attachments/assets/e0c5638a-d555-4d66-a256-9c0d4e77ab05" />
 
-   2. Run inference.py
+   2. Run inference.py  
+      - To see full commands: <img width="183" height="24" alt="image" src="https://github.com/user-attachments/assets/dd9acb3e-1b05-4e56-83bd-f83ec7a35372" />  
+
       - Quick CLI: <img width="521" height="30" alt="image" src="https://github.com/user-attachments/assets/50d8b70e-caa3-4fba-8a75-82dac7b2a6af" />
       
       - CLI with translate: <img width="940" height="29" alt="image" src="https://github.com/user-attachments/assets/4cc8f70b-0bf6-44f5-ac35-a9ad27439c66" />
