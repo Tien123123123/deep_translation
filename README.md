@@ -19,14 +19,22 @@ A. Install requirement from requirement.txt
    - To run AI models in training and inference, I recommend using GPU by install cuda  
 
 B. For trainning:  
-   1. Run yolo_processing:
+   1. Run yolo_processing:  
       <img width="345" height="43" alt="image" src="https://github.com/user-attachments/assets/29862266-1766-407e-a1f5-4bebf6bcdd75" />  
          - When running yolo_processing.py, the system will create dataset folder for containing text_dataset folder
          - text_dataset folder will contain yolo structure dataset, include images and annotations (txt files) for both Train and Test set   
            <img width="295" height="161" alt="image" src="https://github.com/user-attachments/assets/83d6ed3f-620b-4305-920a-f4c4c52b34a9" />  
    2. Prepare data.yaml: In path, replace with your dataset directory  
       Note: dataset folder need to follow YOLOv5 dataset structure  
-   3. Train YOLO model with data.yaml  
+   3. Train YOLO model with data.yaml
+      - For new model:  
+      <img width="278" height="28" alt="image" src="https://github.com/user-attachments/assets/969ccad2-aae5-4ebf-8b18-a64c57fdfd45" />
+      - For pre-trained model:
+      <img width="705" height="31" alt="image" src="https://github.com/user-attachments/assets/16539915-82b2-42f3-92b8-683adb02652f" />
+      + pre_train: set True system will pre-train model and vice versa  
+      + model_pretrain_dir: model use for pre-train   
+
+ 
 
 C. For running:
    1. Run set_up.py: when running set_up.py, system will create dataset folder for containing checking_dataset and language_dataset
